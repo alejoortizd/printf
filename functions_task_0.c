@@ -49,21 +49,22 @@ int p_p(va_list valist)
  */
 int p_di(va_list valist)
 {
-	int pdi, x, i, ct;
+	int pdi, x, z, i, ct;
 	char *w;
 
 	pdi = va_arg(valist, int);
 	x = pdi;
-	for (ct = 0; pdi / 10 != 0; ct++)
+	for (ct = 1; pdi / 10 != 0; ct++)
 		pdi = pdi / 10;
-	w = malloc(sizeof(int) * ct);
+	w = malloc(sizeof(char) * ct);
 	if (w == NULL)
 		return (0);
-	for (i = 0; i < ct; i++)
+	for (i = 1; i <= ct; i++)
 	{
-		w[ct - i] = x % 10;
+		w[ct - i] = ((x % 10) + 48);
 		x = x / 10;
 	}
+	z = (write(1, w, ct));
 	free(w);
-	return (write(1, w, ct));
+	return (z);
 }
