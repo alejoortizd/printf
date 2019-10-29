@@ -28,5 +28,7 @@ int p_p(va_list valist);
 int p_c(va_list valist);
 int p_s(va_list valist);
 
+/* prototype of the 1 task */
+int p_di(va_list valist);
 
 #endif

@@ -14,6 +14,8 @@ int (*aux(const char *format))(va_list)
 		{"c", p_c},
 		{"s", p_s},
 		{"%", p_p},
+		{"d", p_di},
+		{"i", p_di},
 		{NULL, NULL}
 	};
 
