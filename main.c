@@ -7,7 +7,7 @@ int main(void)
 	char c;
 	char *str;
 	int alen, elen;
-	int y = 10;
+	int y = -10;
 
 /*NULL*/
 	printf(NULL);
@@ -87,6 +87,8 @@ int main(void)
 	_printf("Actual      : %d\n");
 	printf("Expected     : %d \n", y);
         _printf("Actual      : %d \n", y);
+        printf("Expected     : %d \n", -2147483648);
+        _printf("Actual      : %d \n", -2147483648);
 
 
 	return (0);
