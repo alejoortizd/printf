@@ -50,24 +50,20 @@ int p_p(va_list valist)
 int p_di(va_list valist)
 {
 	int pdi, x, i, ct;
-	char *w, *mod;
+	char *w;
 
 	pdi = va_arg(valist, int);
 	x = pdi;
 	for (ct = 0; pdi / 10 != 0; ct++)
-		pd = pdi / 10;
+		pdi = pdi / 10;
 	w = malloc(sizeof(int) * ct);
 	if (w == NULL)
-		return (NULL);
+		return (0);
 	for (i = 0; i < ct; i++)
 	{
 		w[ct - i] = x % 10;
 		x = x / 10;
 	}
-	for (i = 0; i < ct; i++)
-	{
-		free(w[i]);
-	}
 	free(w);
-	return (write(1, &w, 4));
+	return (write(1, w, ct));
 }
