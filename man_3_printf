@@ -1,0 +1,77 @@
+.Dd 29/10/19
+.Dt _printf 3
+.Sh NAME
+.Nm _printf
+.Nd formatted output conversion
+.Sh LIBRARY
+.Bl -tag -width -indent
+.It #ifndef _HOLBERTON_H
+.It #define _HOLBERTON_H
+.It #include <stdarg.h>
+.It #include <stdio.h>
+.It #include <stdlib.h>
+.It #include <string.h>
+.It #include <unistd.h>
+.It #endif
+.Sh SYNOPSIS
+#include "holberton.h"
+.Bl
+.Nm
+.Op Fl valist
+.Sh DESCRIPTION
+The
+.Nm
+() function produces output according to a format as described below. The
+.Nm
+() function write output to stdout.
+.br
+.br
+The format string is composed of zero or more ordinary characters (not %), which
+are copied unchanged to the output stream.also the function make a conversion
+specifier is introduced by the % character.
+.br
+
+To create the function
+.Nm
+() we create two files called functions_task_0.c and _putchar.c, also we create
+a header called holberton.h where has all the functions prototypes and structure
+of the project.
+.br
+
+.El
+.Pp
+A list of flags and their descriptions:
+.Bl -tag -width -indent
+.It Fl %c
+Return a character
+.It Fl %s
+Return a string
+.It Fl %%
+Return a %
+.It Fl %d - %i
+Return a digit or an Integer respectively
+.El
+.Pp
+
+.Sh FILES
+.Bl -tag -width
+.It Pa /home/vagrant/printf/functions_task_0.c
+.br
+File that has all the functions behaviors with the arguments they receives and
+the final output
+.It Pa /home/vagrant/printf/_printf.c
+.br
+Is the body of the project
+.It Pa /home/vagrant/printf/holberton.h
+.br
+Is the header of the project
+.El
+.Sh RETURN VALUES
+These function return the nomber of characters printed. also this function
+return a negative if an error occurs.
+.El
+.Sh EXAMPLE
+To print a the limit of an intenger you can write on your program the next line:
+.br
+.br
+_printf("%d", -2147483648);

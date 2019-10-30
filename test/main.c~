@@ -6,6 +6,8 @@ int main(void)
 {
 	char c;
 	char *str;
+	int alen, elen;
+	int y = 10;
 
 /*NULL*/
 	printf(NULL);
@@ -14,7 +16,6 @@ int main(void)
 
 /*char*/
 	c = 'z';
-	int alen, elen;
 	printf("=====================\n");
 	printf("*****CHAR*****\n");
 	printf("=====================\n");
@@ -43,7 +44,7 @@ int main(void)
 	printf("=====================\n");
 	printf("*****STRINGS*****\n");
 	printf("=====================\n");
-	char *str = "hello, world";
+	str = "hello, world";
 	alen = elen = 0;
 	printf("Expected   : %s\n", "holberton");
 	_printf("Actual     : %s\n", "holberton");
@@ -77,6 +78,16 @@ int main(void)
 	printf("Actual     :");
 	_printf("%");
 	printf("\n");
+
+/*integers*/
+	printf("=====================\n");
+	printf("*****INTEGERS*****\n");
+	printf("=====================\n");
+	printf("Expected     : %d\n");
+	_printf("Actual      : %d\n");
+	printf("Expected     : %d\n", y);
+        _printf("Actual      : %d\n", y);
+
 
 	return (0);
 }
